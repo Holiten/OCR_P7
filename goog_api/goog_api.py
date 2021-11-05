@@ -18,7 +18,7 @@ class GoogleApi:
         self.google_adress = str
         self.google_status = int
 
-    def fetch_infos(self, user_input):
+    def goog_fetch_infos(self, user_input):
         """GoogleApi method to fetch coords (lat & long) from Google API"""
         google_params = {
             "key": os.environ["GOOGLE_KEY"],
@@ -29,7 +29,6 @@ class GoogleApi:
 
         google_r = requests.get(self.google_url, params=google_params)
         google_j = google_r.json()
-        print(google_j)
 
         self.google_status = google_j['status']
 
@@ -42,5 +41,5 @@ class GoogleApi:
             return self.google_coords, self.google_adress, self.google_status
 
         else:
-            print("Merci de refaire une recherche")
+            print("La recherche n'a pas pu aboutir")
             # Faire parler le bot --PHRASE D'ERREUR--

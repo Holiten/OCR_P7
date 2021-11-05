@@ -14,5 +14,5 @@ class MockResponse:
 @patch('requests.get', return_value=MockResponse())
 def test_fetch_infos_zero(mock_request):
     g = GoogleApi()
-    g.fetch_infos("fvazveda")
+    g.goog_fetch_infos("fvazveda")
     assert g.google_status == "ZERO_RESULTS"

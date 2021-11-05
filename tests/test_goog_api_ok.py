@@ -35,9 +35,9 @@ class MockResponse:
 
 
 @patch('requests.get', return_value=MockResponse())
-def test_fetch_infos_ok(mock_requests):
+def test_goog_fetch_infos_ok(mock_requests):
     g = GoogleApi()
-    g.fetch_infos("OpenClassRoom")
+    g.goog_fetch_infos("OpenClassRoom")
     assert g.google_coords == "48.8975156|2.3833993"
     assert g.google_adress == "10 Quai de la Charente, 75019 Paris, France"
     assert g.google_status == "OK"
