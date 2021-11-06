@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "GrandPyBoT";
+    src: url("../../static/font/GrandPyBoT.ttf");
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: blue;
+}
+
+.title{
+    font-family: GrandPyBoT;
+    font-size: 300%;
+    text-decoration: none;
+    color: black;
+}
+
+.title:hover{
+    text-decoration: none;
+    color: black;
+}
