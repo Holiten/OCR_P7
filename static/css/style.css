@@ -1,25 +1,151 @@
 @font-face {
     font-family: "GrandPyBoT";
-    src: url("../../static/font/GrandPyBoT.ttf");
+    src: url("../../static/font/Robotica.ttf");
 }
 
 body{
+    height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #60a3bc;
+}
+
+.navbar{
+    background-color: #0a3d62;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav_container{
+    font-family: GrandPyBoT;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    text-transform: capitalize;
+
 }
 
 header{
-    background: blue;
+    background-color: #60a3bc;
+    display: flex;
+    justify-content: center;
 }
 
-.title{
+.head_container{
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+#head_circle{
+    background: #0a3d62;
+    border-radius: 50%;
+    width: 255px;
+    height: 255px;
+    border: 2px solid #82ccdd;
+    margin: auto;
+}
+
+.hello_bot{
+    margin-top: 50px;
+}
+
+.hello_bot h1{
     font-family: GrandPyBoT;
-    font-size: 300%;
+}
+
+h1{
+    text-align: center;
+}
+
+section{
+    background: #60a3bc;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.input_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#user_text{
+    border: solid #0a3d62 3px;
+    border-radius: 8px;
+    width: 30%;
+    height: 30px;
+    font-family: "Arial Black";
+    font-size: 1.1rem;
+    padding-left: 10px;
+}
+
+.fas {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+footer{
+    background-color: #0a3d62;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.foot_container_top{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot_container_bot{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot_twitter{
+    font-size: 3rem;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.foot_twitter i{
     text-decoration: none;
     color: black;
 }
 
-.title:hover{
+.foot_github{
+    font-size: 3rem;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.foot_github i{
     text-decoration: none;
     color: black;
+}
+
+.foot_linkedin{
+    font-size: 3rem;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.foot_linkedin i{
+    text-decoration: none;
+    color: black;
+}
+
+.foot_container_bot p{
+    font-family: GrandPyBoT;
+    font-size: 1.5rem;
 }
