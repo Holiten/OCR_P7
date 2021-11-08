@@ -71,6 +71,13 @@ section{
     justify-content: center;
 }
 
+.input_container form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 #user_text{
     border: solid #0a3d62 3px;
     border-radius: 8px;
@@ -148,4 +155,9 @@ footer{
 .foot_container_bot p{
     font-family: GrandPyBoT;
     font-size: 1.5rem;
+}
+
+.foot_container_bot a{
+    text-decoration: none;
+    color: black;
 }

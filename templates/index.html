@@ -31,8 +31,16 @@
     </header>
     <section>
         <div class="input_container">
-            <input type="text" id="user_text" name="user_text" placeholder="Quel lieu recherches tu ?">
-            <i class="fas fa-search"></i>
+            <form action="{{ url_for('user_text') }}" id="form" method="post">
+                <input type="text" id="user_text" name="user_text" placeholder="Quel lieu recherches tu ?">
+                <i class="fas fa-search" id="user_send"></i>
+            </form>
+        </div>
+        <div class="goog_map_container">
+            GOOGLE MAP
+        </div>
+        <div class="wiki_container">
+            WIKI
         </div>
     </section>
     <footer>
@@ -54,8 +62,11 @@
             </div>
         </div>
         <div class="foot_container_bot">
-            <p>BRUNO LE MARCHAND</p>
+            <a href="https://www.oliten.tv/" target="_blank" class="oliten_link">
+                    <p>BRUNO LE MARCHAND</p>
+            </a>
         </div>
     </footer>
+    <script src="/static/js/main.js"></script>
 </body>
 </html>

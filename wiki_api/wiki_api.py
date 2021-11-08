@@ -34,7 +34,6 @@ class WikiApi:
 
         wiki_r = requests.get(self.wiki_api_url, params=wiki_query_params)
         wiki_j = wiki_r.json()
-        print(wiki_j)
 
         try:
             self.wiki_page_id = wiki_j['query']['pages'][0]['pageid']
@@ -49,3 +48,4 @@ class WikiApi:
             self.wiki_error = "ZERO_RESULTS"
             return self.wiki_error
             # Faire parler le bot --PHRASE D'ERREUR--
+
