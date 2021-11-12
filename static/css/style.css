@@ -33,8 +33,7 @@ header{
 
 .head_container{
     display: flex;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
     flex-direction: column;
 }
 
@@ -45,10 +44,6 @@ header{
     height: 255px;
     border: 2px solid #82ccdd;
     margin: auto;
-}
-
-.hello_bot{
-    margin-top: 50px;
 }
 
 .hello_bot h1{
@@ -96,9 +91,8 @@ section{
 
 footer{
     background-color: #0a3d62;
-    position: absolute;
     width: 100%;
-    bottom: 0;
+
 }
 
 .foot_container_top{
@@ -161,3 +155,44 @@ footer{
     text-decoration: none;
     color: black;
 }
+
+
+#api_container{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#wiki{
+    display: flex;
+    font-family: "Arial Black";
+    font-size: 0.8rem;
+    align-content: center;
+    justify-content: center;
+}
+
+#map{
+    display: flex;
+    margin-top: 30px;
+    height: 300px;
+    width: 100%;
+}
+
+#bubble{
+    display: flex;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px #B2B2B2;
+    margin: 20px;
+    width: 30%;
+}
+
+.little_logo{
+    margin-bottom: 10px;
+}
+
+p{
+    margin: 5px;
+}
+

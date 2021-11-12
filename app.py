@@ -11,7 +11,7 @@ def index():  # put application's code here
     return render_template('index.html')
 
 
-@app.route('/user_text', methods=['post'])
+@app.route('/user_text', methods=['POST'])
 def user_text():
     user_input_text = request.json['question']
 
@@ -21,6 +21,8 @@ def user_text():
     g = GoogleApi()
     g.goog_fetch_infos(google_args)
     wiki_args = g.google_coords
+    g_lat = g.google_lat
+    g_long = g.google_long
 
     w = WikiApi()
     wiki_results = w.wiki_fetch_infos(wiki_args)
@@ -29,6 +31,8 @@ def user_text():
         user_input_text=user_input_text,
         google_args=google_args,
         wiki_args=wiki_args,
+        g_lat=g_lat,
+        g_long=g_long,
         wiki_results=wiki_results
     )
 

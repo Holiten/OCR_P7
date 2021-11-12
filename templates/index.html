@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -29,19 +29,22 @@
             </div>
         </div>
     </header>
+<!-- SECTION -->
     <section>
         <div class="input_container">
             <form action="{{ url_for('user_text') }}" id="form" method="post">
                 <input type="text" id="user_text" name="user_text" placeholder="Quel lieu recherches tu ?">
-                <i class="fas fa-search" id="user_send"></i>
             </form>
         </div>
-        <div class="goog_map_container">
-            GOOGLE MAP
-        </div>
-        <div class="wiki_container">
-            WIKI
-        </div>
+            <div class="invisible" id="api_container">
+                <div id="map"></div>
+                <div id="wiki">
+                    <img class="little_logo" src="/static/img/robot02_90810.png" alt="little_head" width="128" height="128">
+                    <div id="bubble">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
     </section>
     <footer>
         <div class="foot_container_top">
@@ -67,6 +70,16 @@
             </a>
         </div>
     </footer>
-    <script src="/static/js/main.js"></script>
+
+    <script
+            async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6hou4EP8XjxHSwk9FGDoN1e6EWL7sAUM&callback=initMap&v=weekly"
+    >
+    </script>
+
+    <script src="/static/js/script.js.js"></script>
+
+
+
 </body>
 </html>

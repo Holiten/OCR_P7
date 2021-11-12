@@ -38,12 +38,3 @@ function getValue(evenement){
         document.querySelector('#bubble p').textContent = results['wiki_results'][2]
     })
 }
-
-let user_button = document.getElementById("form")
-user_button.addEventListener(
-    "submit",
-     getValue)
-
-let g_map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 0, lng: 0 },
-        zoom: 14});
