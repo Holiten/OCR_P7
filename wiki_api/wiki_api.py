@@ -30,6 +30,8 @@ class WikiApi:
             "redirects": True,
             "format": "json",
             "formatversion": 2,
+            "utf8": True,
+            'exsectionformat': 'plain',
         }
 
         wiki_r = requests.get(self.wiki_api_url, params=wiki_query_params)

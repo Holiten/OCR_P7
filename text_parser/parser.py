@@ -92,4 +92,5 @@ class Parser:
         self.remove_special_char()
         self.remove_double_space()
         self.remove_stopwords()
+        print(self.user_text)
         return self.user_text

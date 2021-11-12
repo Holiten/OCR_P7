@@ -16,25 +16,21 @@ function getValue(evenement){
 
     fetch('/user_text', options)
         .then(results => results.json())
-        .then(results => {
-        // let html_elem_create = document.createElement('p')
-        // html_elem_create.textContent = results['wiki_results'][2]
-        document.getElementById('api_container').style.display = 'flex'
+        .then(results => {document.getElementById('api_container').style.display = 'flex'
 
         let g_lat = results['g_lat']
         let g_long = results['g_long']
 
+        let g_map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: g_lat, lng: g_long},
+            zoom: 14
+        })
 
+        new google.maps.Marker({
+            position: { lat: g_lat, lng: g_long},
+            map: g_map,
+        })
 
-        // let divMap = document.createElement("div");
-        // divMap.className = "map";
-        // divMap.id = "map"
-
-
-        g_map.setCenter({lat: g_lat , lng: g_long})
-
-
-        // document.getElementById('bubble').appendChild(html_elem_create)
         document.querySelector('#bubble p').textContent = results['wiki_results'][2]
     })
 }
@@ -43,7 +39,3 @@ let user_button = document.getElementById("form")
 user_button.addEventListener(
     "submit",
      getValue)
-
-let g_map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 0, lng: 0 },
-        zoom: 14});

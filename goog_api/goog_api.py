@@ -37,6 +37,7 @@ class GoogleApi:
             self.google_long = google_j['candidates'][0]['geometry']['location']['lng']
             self.google_coords = str(self.google_lat) + "|" + str(self.google_long)
             self.google_adress = google_j['candidates'][0]['formatted_address']
+            print(self.google_adress)
 
             return self.google_coords, self.google_adress, self.google_status
 
