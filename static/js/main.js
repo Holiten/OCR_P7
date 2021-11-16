@@ -16,7 +16,7 @@ function getValue(evenement){
 
     fetch('/user_text', options)
         .then(results => results.json())
-        .then(results => {document.getElementById('header').style.display = 'flex'
+        .then(results => {document.getElementById('api_container').style.display = 'flex'
 
         let g_lat = results['g_lat']
         let g_long = results['g_long']
@@ -31,9 +31,9 @@ function getValue(evenement){
             map: g_map,
         })
 
-        document.querySelector('#user_text_bubble p').textContent = results['google_args']
-        document.querySelector('#format_adress_bubble p').textContent = results['g_form_adress']
-        document.querySelector('#bubble p').textContent = results['wiki_results'][2]
+        document.querySelector('#user_text_bubble p').textContent = "Voici ce que j'ai trouvé sur " + results['google_args']
+        document.querySelector('#format_adress_bubble p').textContent = "L'adresse est la suivante : " + results['g_form_adress']
+        document.querySelector('#bubble p').textContent = "Je connais d'ailleurs cet endroit et voici ce que je peux dire de cette adresse : " + results['wiki_results'][2]
     })
 }
 

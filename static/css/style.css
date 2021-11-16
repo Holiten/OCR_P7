@@ -175,15 +175,17 @@ footer{
     flex: 1;
 }
 
-#wiki{
+#wiki {
     display: flex;
     font-family: "Arial Black";
     font-size: 0.8rem;
-    /*align-content: center;*/
-    /*justify-content: center;*/
-    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
     margin: auto;
     flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 #map{
@@ -191,7 +193,6 @@ footer{
     margin-top: 30px;
     height: 300px;
     width: 100%;
-    flex: 1;
 }
 
 #bubble{

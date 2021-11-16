@@ -19,7 +19,6 @@
     </div>
 <!-- HEADER -->
     <header id="header">
-        <div id="map"></div>
         <div class="head_container">
             <div id="head_circle">
                 <img class="head_logo" src="/static/img/robot02_90810.png" alt="logo_head">
@@ -29,8 +28,20 @@
                 <h1>Quel lieu recherches tu ?</h1>
             </div>
         </div>
-        <div id="wiki">
-{#                    <img class="little_logo" src="/static/img/robot02_90810.png" alt="little_head" width="128" height="128">#}
+
+    </header>
+<!-- SECTION -->
+    <section>
+        <div class="input_container">
+            <form action="{{ url_for('user_text') }}" id="form" method="post">
+                <input type="text" id="user_text" name="user_text" placeholder="Quel lieu recherches tu ?">
+            </form>
+        </div>
+
+        <div id="api_container">
+            <div id="map"></div>
+                <div id="wiki">
+                    <img class="little_logo" src="/static/img/robot02_90810.png" alt="little_head" width="128" height="128">
                     <div id="user_text_bubble">
                         <p></p>
                     </div>
@@ -41,29 +52,7 @@
                         <p></p>
                     </div>
                 </div>
-    </header>
-<!-- SECTION -->
-    <section>
-        <div class="input_container">
-            <form action="{{ url_for('user_text') }}" id="form" method="post">
-                <input type="text" id="user_text" name="user_text" placeholder="Quel lieu recherches tu ?">
-            </form>
-        </div>
-{#            <div class="invisible" id="api_container">#}
-{#                <div id="map"></div>#}
-{#                <div id="wiki">#}
-{#                    <img class="little_logo" src="/static/img/robot02_90810.png" alt="little_head" width="128" height="128">#}
-{#                    <div id="user_text_bubble">#}
-{#                        <p></p>#}
-{#                    </div>#}
-{#                    <div id="format_adress_bubble">#}
-{#                        <p></p>#}
-{#                    </div>#}
-{#                    <div id="bubble">#}
-{#                        <p></p>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
+            </div>
     </section>
     <footer>
         <div class="foot_container_top">
