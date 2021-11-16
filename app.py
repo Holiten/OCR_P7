@@ -23,16 +23,17 @@ def user_text():
     wiki_args = g.google_coords
     g_lat = g.google_lat
     g_long = g.google_long
+    g_form_adress = g.google_adress
 
     w = WikiApi()
     wiki_results = w.wiki_fetch_infos(wiki_args)
 
     return jsonify(
-        user_input_text=user_input_text,
         google_args=google_args,
         wiki_args=wiki_args,
         g_lat=g_lat,
         g_long=g_long,
+        g_form_adress=g_form_adress,
         wiki_results=wiki_results
     )
 

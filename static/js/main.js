@@ -16,7 +16,7 @@ function getValue(evenement){
 
     fetch('/user_text', options)
         .then(results => results.json())
-        .then(results => {document.getElementById('api_container').style.display = 'flex'
+        .then(results => {document.getElementById('header').style.display = 'flex'
 
         let g_lat = results['g_lat']
         let g_long = results['g_long']
@@ -31,6 +31,8 @@ function getValue(evenement){
             map: g_map,
         })
 
+        document.querySelector('#user_text_bubble p').textContent = results['google_args']
+        document.querySelector('#format_adress_bubble p').textContent = results['g_form_adress']
         document.querySelector('#bubble p').textContent = results['wiki_results'][2]
     })
 }

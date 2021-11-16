@@ -8,6 +8,9 @@ body{
     margin: 0;
     padding: 0;
     background-color: #60a3bc;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 .navbar{
@@ -18,7 +21,7 @@ body{
 }
 
 .nav_container{
-    font-family: GrandPyBoT;
+    font-family: GrandPyBoT, serif;
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
     text-transform: capitalize;
@@ -35,6 +38,7 @@ header{
     display: flex;
     margin-top: 20px;
     flex-direction: column;
+    flex: 1;
 }
 
 #head_circle{
@@ -164,12 +168,22 @@ footer{
     align-content: center;
 }
 
+.head_container{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    flex: 1;
+}
+
 #wiki{
     display: flex;
     font-family: "Arial Black";
     font-size: 0.8rem;
-    align-content: center;
-    justify-content: center;
+    /*align-content: center;*/
+    /*justify-content: center;*/
+    flex-direction: column;
+    margin: auto;
+    flex: 1;
 }
 
 #map{
@@ -177,9 +191,28 @@ footer{
     margin-top: 30px;
     height: 300px;
     width: 100%;
+    flex: 1;
 }
 
 #bubble{
+    display: flex;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px #B2B2B2;
+    margin: 20px;
+    width: 30%;
+}
+
+#format_adress_bubble{
+    display: flex;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px #B2B2B2;
+    margin: 20px;
+    width: 30%;
+}
+
+#user_text_bubble{
     display: flex;
     background-color: #F2F2F2;
     border-radius: 5px;
