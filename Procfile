@@ -1,2 +1,1 @@
-web: gunicorn app:app
-init: FLASK_APP=app.py
+web: gunicorn -w 4 app:app
