@@ -6,10 +6,10 @@ import json
 from text_parser.remove_chars import list_chars
 
 actual_folder = os.path.dirname(__file__)
-stopwords_folder = "\\remove_chars"
+stopwords_folder = "/remove_chars"
 full_path = actual_folder + stopwords_folder
 
-with open(full_path + '\\stopwords_fr.json', 'rb') as f:
+with open(full_path + '/stopwords_fr.json', 'rb') as f:
     stopwords = json.load(f)
 
 
