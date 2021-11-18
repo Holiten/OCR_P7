@@ -1,6 +1,0 @@
-BOT :
-
-- J'ai trouvé l'adresse de (PARSER.USER_TEXT) :
-(GOOG_API.FORMATED_ADRESSE)
-
-- 
