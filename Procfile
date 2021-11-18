@@ -1,2 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT app:app
-init: FLASK_APP=app.py
+web: gunicorn app:app
